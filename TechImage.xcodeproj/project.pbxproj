@@ -12,6 +12,7 @@
 		3B51CEF1255C0D590063A0BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B51CEF0255C0D590063A0BA /* Assets.xcassets */; };
 		3B51CEF4255C0D590063A0BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B51CEF3255C0D590063A0BA /* Preview Assets.xcassets */; };
 		3B51CF05255D5F220063A0BA /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B51CF04255D5F220063A0BA /* Album.swift */; };
+		3B51CF0A255D6C8C0063A0BA /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B51CF09255D6C8C0063A0BA /* AlbumView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3B51CEF3255C0D590063A0BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3B51CEF5255C0D590063A0BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B51CF04255D5F220063A0BA /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		3B51CF09255D6C8C0063A0BA /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		3B51CEEB255C0D560063A0BA /* TechImage */ = {
 			isa = PBXGroup;
 			children = (
+				3B51CF08255D6C540063A0BA /* Supporting Views */,
 				3B51CF04255D5F220063A0BA /* Album.swift */,
 				3B51CEEC255C0D560063A0BA /* TechImageApp.swift */,
 				3B51CEEE255C0D560063A0BA /* ContentView.swift */,
@@ -70,6 +73,14 @@
 				3B51CEF3255C0D590063A0BA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3B51CF08255D6C540063A0BA /* Supporting Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B51CF09255D6C8C0063A0BA /* AlbumView.swift */,
+			);
+			path = "Supporting Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 			files = (
 				3B51CEEF255C0D560063A0BA /* ContentView.swift in Sources */,
 				3B51CEED255C0D560063A0BA /* TechImageApp.swift in Sources */,
+				3B51CF0A255D6C8C0063A0BA /* AlbumView.swift in Sources */,
 				3B51CF05255D5F220063A0BA /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
