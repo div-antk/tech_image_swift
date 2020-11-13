@@ -20,12 +20,48 @@ struct AlbumView: View {
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+//        ビューを重ねて表示
+        ZStack {
+//            ビューをグループ化
+            Group {
+//                画像のファイルパスが設定されている場合
+                if self.path.count > 0 {
+//                    プロパティ値であるself.pathで画像のファイルパスを設定
+                    Image(uiImage: UIImage.init(contentsOfFile: self.path)!)
+//                        オリジナル画像を表示
+                        .renderingMode(.original)
+//                        横幅、高さ、表示位置
+                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                }
+                else {
+//                    iOSで使用できるシステムアイコン（四角）を表示
+                    Image(systemName: "square.on.square")
+                        .renderingMode(.original)
+                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                }
+//                お気に入りの場合
+                if self.isFavorite == true {
+//                    ハートを表示
+                    Image(systemName: "heart.fill")
+//                        左下に表示
+                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: .bottomLeading)
+//                        ピンク
+                        .foregroundColor(.pink)
+                }
+            }
+//            グループ内の要素（ビュー）に余白を追加
+            .padding()
+            .border(Color.gray, width: 1) // 枠線をグレーに設定
+        }
+//        ZStack内のビューを角丸
+        .cornerRadius(10)
     }
 }
 
 struct AlbumView_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumView()
+        AlbumView(name: "お気に入り",
+                  path: "",
+                  isFavorite: true)
     }
 }
